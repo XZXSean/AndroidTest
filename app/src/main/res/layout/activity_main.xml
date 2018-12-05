@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--文字带阴影的按钮-->
+    <Button
+        android:id="@+id/btn2uiview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn2uiview"
+        android:textSize="12dp"
+        android:shadowColor="#aa5"
+        android:shadowRadius="2"
+        android:shadowDx="5"
+        android:shadowDy="5"/>
+
+
+    <Button
+        android:id="@+id/btn2login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login"
+        android:textSize="12dp"/>
+
+    <Button
+        android:id="@+id/btn2calculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="calculator"
+        android:textSize="12dp"/>
+
+    <Button
+        android:id="@+id/btn2listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="listview"
+        android:textSize="12dp"/>
+
+
+
+</LinearLayout>

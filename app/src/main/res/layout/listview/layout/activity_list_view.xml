@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".listview.ListViewActivity">
+
+    <ListView
+        android:id="@+id/listview_lv1"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:entries="@array/books"
+        android:divider="#c7c6c6"
+        android:dividerHeight="2dp"
+        android:headerDividersEnabled="true"/>
+
+    <ListView
+        android:layout_marginTop="15dp"
+        android:id="@+id/listview_lv2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:headerDividersEnabled="true"/>
+
+
+
+</LinearLayout>

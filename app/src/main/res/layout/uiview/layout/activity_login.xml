@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".uiview.LoginActivity">
+
+    <TextView
+        android:id="@+id/login_username"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:text="用户名: " />
+
+    <EditText
+        android:id="@+id/login_ex_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/login_username"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/login_username"
+        android:hint="username"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/login_password"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_username"
+        android:paddingTop="15dp"
+        android:text="密 码: " />
+
+    <EditText
+        android:id="@+id/login_ex_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/login_password"
+        android:layout_alignLeft="@id/login_ex_username"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/login_ex_username"
+        android:layout_toRightOf="@id/login_password"
+        android:hint="password"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/login_phonenumber"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_password"
+        android:paddingTop="15dp"
+        android:text="电话号码" />
+
+    <EditText
+        android:id="@+id/login_ex_phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/login_phonenumber"
+        android:layout_alignLeft="@id/login_ex_password"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/login_ex_password"
+        android:layout_toRightOf="@id/login_phonenumber"
+        android:hint="phone number"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/login_date"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_phonenumber"
+        android:paddingTop="15dp"
+        android:text="日期: " />
+
+    <EditText
+        android:id="@+id/login_ex_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/login_date"
+        android:layout_alignLeft="@id/login_ex_phonenumber"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/login_ex_phonenumber"
+        android:layout_toRightOf="@id/login_date"
+        android:focusable="false"
+        android:hint="date"
+        android:inputType="date" />
+
+    <RadioGroup
+        android:id="@+id/login_radio_sex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_date"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="15dp">
+
+        <RadioButton
+            android:id="@+id/login_radio_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:text="male" />
+
+        <RadioButton
+            android:id="@+id/login_radio_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="female" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/login_llayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_radio_sex"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="25dp"
+        android:paddingTop="15dp">
+
+        <CheckBox
+            android:id="@+id/login_cb_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="red" />
+
+        <CheckBox
+            android:id="@+id/login_cb_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="blue" />
+
+        <CheckBox
+            android:id="@+id/login_cb_yellow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="yellow" />
+
+        <CheckBox
+            android:id="@+id/login_cb_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="green" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/login_btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_llayout"
+        android:layout_marginTop="15dp"
+        android:text="cancel" />
+
+    <Button
+        android:id="@+id/login_btn_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_btn_cancel"
+        android:text="sure" />
+
+</RelativeLayout>
