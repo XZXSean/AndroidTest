@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.msi.studyonandroid.glide.GlideImageActivity;
+import com.msi.studyonandroid.glide.GlideRVActivity;
 import com.msi.studyonandroid.listview.ListViewActivity;
 import com.msi.studyonandroid.recyclerview.RecylerviewActivity;
 import com.msi.studyonandroid.uiview.CalculatorActivity;
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.btn2glide:
-                    intent = new Intent(MainActivity.this,GlideImageActivity.class);
+                    intent = new Intent(MainActivity.this,GlideRVActivity.class);
                     startActivity(intent);
                     break;
             }

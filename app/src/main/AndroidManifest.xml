@@ -57,7 +57,9 @@
         <activity android:name=".recyclerview.HorRecyclerViewActivity" />
         <activity android:name=".recyclerview.GridRecyclerViewActivity" />
         <activity android:name=".recyclerview.PuRecyclerViewActivity" />
-        <activity android:name=".glide.GlideImageActivity"></activity>
+        <activity android:name=".glide.GlideImageActivity" />
+        <activity android:name=".glide.GlideRVActivity" />
+        <activity android:name=".glide.SpacePhotoActivity"></activity>
     </application>
 
 </manifest>
