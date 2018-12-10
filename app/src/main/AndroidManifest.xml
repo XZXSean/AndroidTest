@@ -3,6 +3,8 @@
     package="com.msi.studyonandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -59,7 +61,16 @@
         <activity android:name=".recyclerview.PuRecyclerViewActivity" />
         <activity android:name=".glide.GlideImageActivity" />
         <activity android:name=".glide.GlideRVActivity" />
-        <activity android:name=".glide.SpacePhotoActivity"></activity>
+        <activity android:name=".glide.SpacePhotoActivity" />
+
+        <receiver
+            android:name=".broadcast.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

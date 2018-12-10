@@ -10,7 +10,6 @@ import com.msi.studyonandroid.R;
 public class GlideImageActivity extends AppCompatActivity {
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +39,6 @@ public class GlideImageActivity extends AppCompatActivity {
                 .thumbnail(0.02f)
                 .into(iv4);
 
-
+        
     }
 }

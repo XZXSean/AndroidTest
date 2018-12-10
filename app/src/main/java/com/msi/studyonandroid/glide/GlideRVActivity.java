@@ -52,7 +52,7 @@ public class GlideRVActivity extends AppCompatActivity {
             public MyViewHolder(View itemView) {
 
                 super(itemView);
-                mPhotoImageView = (ImageView) itemView.findViewById(R.id.iv_photo_glide_rv);
+                mPhotoImageView = itemView.findViewById(R.id.iv_photo_glide_rv);
                 itemView.setOnClickListener(this);
             }
 

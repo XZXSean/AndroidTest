@@ -1,11 +1,16 @@
 package com.msi.studyonandroid;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.msi.studyonandroid.glide.GlideImageActivity;
 import com.msi.studyonandroid.glide.GlideRVActivity;
@@ -24,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
     private Button btn2recyclerview;
     private Button btn2glide;
 
+    //    网络状态监测广播
+    private IntentFilter intentFilter;
+    private NetworkChangeReceiver networkChangeReceiver;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +44,19 @@ public class MainActivity extends AppCompatActivity {
         btn2listview = findViewById(R.id.btn2listview);
         btn2recyclerview = findViewById(R.id.btn2recyclerview);
         btn2glide = findViewById(R.id.btn2glide);
-
-
         setOnClickListeners();
+
+        intentFilter = new IntentFilter();
+        intentFilter.addAction("android.net.com.CONNECTIVITY_CHANGE");
+        networkChangeReceiver = new NetworkChangeReceiver();
+        registerReceiver(networkChangeReceiver,intentFilter);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(networkChangeReceiver);
+    }
 
     // 监听器
     private void setOnClickListeners() {
@@ -86,6 +102,16 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
             }
+        }
+    }
+
+
+
+    class NetworkChangeReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Toast.makeText(context,"Network changes",Toast.LENGTH_SHORT).show();
+            Log.i("networkchangesReceiver", "onReceive: networkchangereciver");
         }
     }
 }
