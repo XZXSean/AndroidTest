@@ -58,6 +58,41 @@
         android:text="Glide"
         android:textSize="12dp"
         android:gravity="center"/>
+    <Button
+        android:id="@+id/sendBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Broadcast"
+        android:textSize="12dp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/sendLocalBroadcast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Local Broadcast"
+        android:textSize="12dp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/btn2FilePersistence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File Persistence"
+        android:textSize="12dp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/btn2SharedPreferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shared Preferences"
+        android:textSize="12dp"
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/btn2service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Service"
+        android:textSize="12dp"
+        android:gravity="center"/>
 
 
 

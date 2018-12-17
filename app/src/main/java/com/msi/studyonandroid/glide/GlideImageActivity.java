@@ -39,6 +39,6 @@ public class GlideImageActivity extends AppCompatActivity {
                 .thumbnail(0.02f)
                 .into(iv4);
 
-        
+
     }
 }

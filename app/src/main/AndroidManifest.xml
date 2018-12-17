@@ -3,6 +3,7 @@
     package="com.msi.studyonandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -71,6 +72,32 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <receiver
+            android:name=".broadcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.msi.studyonandroid.broadcast.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".broadcast.MyBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.msi.studyonandroid.broadcast.MY_BROADCAST" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".FilePersistence.FilePersistenceActivity" />
+        <activity android:name=".FilePersistence.SharedPreferencesActivity" />
+
+        <service
+            android:name=".service.DownloadService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".service.ServiceActivity"></activity>
     </application>
 
 </manifest>
