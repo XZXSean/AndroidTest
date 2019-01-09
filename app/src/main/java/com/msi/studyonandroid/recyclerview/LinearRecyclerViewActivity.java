@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.Toast;
 
 import com.msi.studyonandroid.R;
 
@@ -21,7 +23,15 @@ public class LinearRecyclerViewActivity extends AppCompatActivity {
         // set Manager
         rvMain.setLayoutManager(new LinearLayoutManager(LinearRecyclerViewActivity.this));
         // set Adapter
-        rvMain.setAdapter(new LinearAdapter(LinearRecyclerViewActivity.this));
+        LinearAdapter linearAdapter = new LinearAdapter(LinearRecyclerViewActivity.this);
+        linearAdapter.setOnItemClickListener(new LinearAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(LinearRecyclerViewActivity.this,"click position = " + position,Toast.LENGTH_LONG).show();
+            }
+        });
+        rvMain.setAdapter(linearAdapter);
+
     }
 
 }
