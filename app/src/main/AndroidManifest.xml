@@ -3,7 +3,7 @@
     package="com.msi.studyonandroid">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
@@ -97,7 +97,8 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".service.ServiceActivity"></activity>
+        <activity android:name=".service.ServiceActivity" />
+        <activity android:name=".musicplayer.MusicPlayerActivity"></activity>
     </application>
 
 </manifest>

@@ -16,6 +16,7 @@ import com.msi.studyonandroid.FilePersistence.FilePersistenceActivity;
 import com.msi.studyonandroid.FilePersistence.SharedPreferencesActivity;
 import com.msi.studyonandroid.glide.GlideRVActivity;
 import com.msi.studyonandroid.listview.ListViewActivity;
+import com.msi.studyonandroid.musicplayer.MusicPlayerActivity;
 import com.msi.studyonandroid.recyclerview.RecylerviewActivity;
 import com.msi.studyonandroid.service.ServiceActivity;
 import com.msi.studyonandroid.uiview.CalculatorActivity;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn2SharedPreferences;
 
     private Button btn2Service;
+    private Button btn2MusicPlayer;
 
     //    网络状态监测广播
     private IntentFilter intentFilter;
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         btn2FilePersistence = findViewById(R.id.btn2FilePersistence);
         btn2SharedPreferences = findViewById(R.id.btn2SharedPreferences);
         btn2Service = findViewById(R.id.btn2service);
+        btn2MusicPlayer = findViewById(R.id.btn2musicplayer);
         setOnClickListeners();
 
         intentFilter = new IntentFilter();
@@ -105,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         btn2FilePersistence.setOnClickListener(onclick);
         btn2SharedPreferences.setOnClickListener(onclick);
         btn2Service.setOnClickListener(onclick);
+        btn2MusicPlayer.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener {
@@ -161,6 +165,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.btn2service:
                     intent = new Intent(MainActivity.this,ServiceActivity.class);
                     startActivity(intent);
+                    break;
+                case R.id.btn2musicplayer:
+                    intent = new Intent(MainActivity.this,MusicPlayerActivity.class);
+                    startActivity(intent);
+                    break;
             }
         }
     }
