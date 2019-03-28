@@ -14,6 +14,7 @@ import android.widget.Toast;
 
 import com.msi.studyonandroid.FilePersistence.FilePersistenceActivity;
 import com.msi.studyonandroid.FilePersistence.SharedPreferencesActivity;
+import com.msi.studyonandroid.fragment.FragmentActivity;
 import com.msi.studyonandroid.glide.GlideRVActivity;
 import com.msi.studyonandroid.listview.ListViewActivity;
 import com.msi.studyonandroid.musicplayer.MusicPlayerActivity;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn2Service;
     private Button btn2MusicPlayer;
+
+    private Button btn2Fragment;
 
     //    网络状态监测广播
     private IntentFilter intentFilter;
@@ -70,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
         btn2SharedPreferences = findViewById(R.id.btn2SharedPreferences);
         btn2Service = findViewById(R.id.btn2service);
         btn2MusicPlayer = findViewById(R.id.btn2musicplayer);
+        btn2Fragment = findViewById(R.id.btn2fragment);
         setOnClickListeners();
 
         intentFilter = new IntentFilter();
@@ -109,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
         btn2SharedPreferences.setOnClickListener(onclick);
         btn2Service.setOnClickListener(onclick);
         btn2MusicPlayer.setOnClickListener(onclick);
+        btn2Fragment.setOnClickListener(onclick);
     }
 
     private class Onclick implements View.OnClickListener {
@@ -168,6 +173,10 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case R.id.btn2musicplayer:
                     intent = new Intent(MainActivity.this,MusicPlayerActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.btn2fragment:
+                    intent = new Intent(MainActivity.this, FragmentActivity.class);
                     startActivity(intent);
                     break;
             }

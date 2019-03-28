@@ -98,7 +98,15 @@
             android:exported="true" />
 
         <activity android:name=".service.ServiceActivity" />
-        <activity android:name=".musicplayer.MusicPlayerActivity"></activity>
+        <activity android:name=".musicplayer.MusicPlayerActivity" />
+
+        <service
+            android:name=".aidltest.MyAidlService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":remote"></service>
+
+        <activity android:name=".fragment.FragmentActivity"></activity>
     </application>
 
 </manifest>

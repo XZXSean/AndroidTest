@@ -1,108 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <!--文字带阴影的按钮-->
-    <Button
-        android:id="@+id/btn2uiview"
+    android:scrollbars="vertical"
+    android:fadingEdge="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="btn2uiview"
-        android:textSize="12dp"
-        android:shadowColor="#aa5"
-        android:shadowRadius="2"
-        android:shadowDx="5"
-        android:shadowDy="5"
-        android:gravity="center"/>
+        android:orientation="vertical">
 
 
-    <Button
-        android:id="@+id/btn2login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="login"
-        android:textSize="12dp"
-        android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <!--文字带阴影的按钮-->
+        <Button
+            android:id="@+id/btn2uiview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="btn2uiview"
+            android:textSize="12dp"
+            android:shadowColor="#aa5"
+            android:shadowRadius="2"
+            android:shadowDx="5"
+            android:shadowDy="5"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2calculator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="calculator"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="listview"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="recyclerview"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2glide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glide"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/sendBroadcast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Broadcast"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/sendLocalBroadcast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Local Broadcast"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2FilePersistence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="File Persistence"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2SharedPreferences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shared Preferences"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2service"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Service"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2musicplayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Music Player"
+            android:textSize="12dp"
+            android:gravity="center"/>
+        <Button
+            android:id="@+id/btn2aidl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AIDL"
+            android:textSize="12dp"
+            android:gravity="center"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btn2calculator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="calculator"
-        android:textSize="12dp"
-        android:gravity="center"/>
-
-    <Button
-        android:id="@+id/btn2listview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="listview"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/btn2recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="recyclerview"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/btn2glide"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Glide"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/sendBroadcast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Send Broadcast"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/sendLocalBroadcast"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Send Local Broadcast"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/btn2FilePersistence"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="File Persistence"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/btn2SharedPreferences"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Shared Preferences"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/btn2service"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Service"
-        android:textSize="12dp"
-        android:gravity="center"/>
-    <Button
-        android:id="@+id/btn2musicplayer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Music Player"
-        android:textSize="12dp"
-        android:gravity="center"/>
-
-
-
-
-
-</LinearLayout>
+</ScrollView>
